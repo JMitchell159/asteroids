@@ -39,6 +39,10 @@ def main():
             if a.is_colliding(player):
                 print("Game over!")
                 sys.exit()
+            for s in shots:
+                if a.is_colliding(s):
+                    a.kill()
+                    s.kill()
         for sprite in drawable:
             sprite.draw(screen)
 
