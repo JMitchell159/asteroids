@@ -41,7 +41,7 @@ def main():
                 sys.exit()
             for s in shots:
                 if a.is_colliding(s):
-                    a.kill()
+                    a.split()
                     s.kill()
         for sprite in drawable:
             sprite.draw(screen)
